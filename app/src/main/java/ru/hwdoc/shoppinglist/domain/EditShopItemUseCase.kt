@@ -1,8 +1,10 @@
 package ru.hwdoc.shoppinglist.domain
 
-class EditShopItemUseCase {
+class EditShopItemUseCase(
+    private val shopListRepository: ShopListRepository
+) {
 
-    fun editeShopItem(shopItem: ShopItem) {
-        TODO()
+    fun editShopItem(shopItem: ShopItem) {
+        shopListRepository.editShopItem(shopItem)
     }
 }
